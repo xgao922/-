@@ -4,10 +4,7 @@
 
 using namespace std;
 
-string LCS3
-
-
-(string str1, string str2, string str3) {
+string LCS3(string str1, string str2, string str3) {
     vector<vector<vector<int>>> dp(str1.size()+1, vector<vector<int>>(str2.size()+1, vector<int>(str3.size()+1, 0)));
     for(int i = 1; i <= str1.size(); i ++) {
         for(int j = 1; j <= str2.size(); j ++) {
