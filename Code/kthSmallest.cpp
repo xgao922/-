@@ -1,69 +1,3 @@
-// #include <iostream>
-// #include <vector>
-// #include <queue>
-// using namespace std;
-
-// struct TreeNode {
-//     int val;
-//     TreeNode *left;
-//     TreeNode *right;
-//     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
-// };
-
-// class Solution {
-// public:
-//     TreeNode* buildBSTFromLevelOrder(vector<int>& levelOrder) {
-//         TreeNode* root = NULL;
-//         for (int val : levelOrder) {
-//             root = insertIntoBST(root, val);
-//         }
-//         return root;
-//     }
-
-//     TreeNode* insertIntoBST(TreeNode* node, int val) {
-//         if (node == NULL) {
-//             return new TreeNode(val);
-//         }
-//         if (val < node->val) {
-//             node->left = insertIntoBST(node->left, val);
-//         } else {
-//             node->right = insertIntoBST(node->right, val);
-//         }
-//         return node;
-//     }
-
-//     int kthSmallest(TreeNode* root, int k) {
-//         int count = 0;
-//         int result = -1;
-//         inorderTraversal(root, k, count, result);
-//         return result;
-//     }
-
-//     void inorderTraversal(TreeNode* node, int k, int& count, int& result) {
-//         if (node == NULL || count >= k) {
-//             return;
-//         }
-//         inorderTraversal(node->left, k, count, result);
-//         count++;
-//         if (count == k) {
-//             result = node->val;
-//             return;
-//         }
-//         inorderTraversal(node->right, k, count, result);
-//     }
-// };
-
-// int main() {
-//     vector<int> levelOrder = {5, 3, 7, 2, 4, 6, 8};
-
-//     Solution solution;
-//     TreeNode* root = solution.buildBSTFromLevelOrder(levelOrder);
-
-//     int k = 3;
-//     cout << "µÚ " << k << " Ð¡µÄ½ÚµãÊÇ: " << solution.kthSmallest(root, k) << endl;
-
-//     return 0;
-// }
 #include <iostream>
 #include <vector>
 #include <queue>
@@ -136,7 +70,7 @@ int main() {
     TreeNode* root = solution.buildBSTFromLevelOrder(levelOrder);
 
     int k = 3;
-    cout << "µÚ " << k << " Ð¡µÄ½áµãÖµÊÇ: " << solution.kthSmallest(root, k) << endl;
+    cout << "ç¬¬ " << k << " å°çš„ç»“ç‚¹å€¼æ˜¯: " << solution.kthSmallest(root, k) << endl;
 
     return 0;
 }
