@@ -11,9 +11,5 @@ int main() {
     oFile.open("res.txt");
     int x = 1;
     oFile >> x;
-    
-
-    
-
     return 0;
 }
